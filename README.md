@@ -1,7 +1,7 @@
-CIS v1.0.0 MySQL Enterprise Edition 8.0 Baseline
+CIS v1.0.0 MySQL 8.0 Baseline
 =========
 
-Ansible Role for Center for Internet Security v1.0.0 for MySQL Enterprise 8.0
+Ansible Role for Center for Internet Security v1.0.0 for MySQL 8.0
 
 Requirements
 ------------
