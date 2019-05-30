@@ -1,2 +1,16 @@
 ---
-# tasks file for test1
+- name: "CHECK: 1.1 Place Databases on Non-System Partitions (Manual Remidiation)"
+  include_tasks: 11_place_databases_on_non_system_artitions.yml
+  tags:
+    - cis1.1
+
+- name: "CHECK: 1.2 Use Dedicated Least Privileged Account for MySQL Daemon/Service (Manual Remidiation)"
+  include_tasks: 12_use_dedicated_least_privileged_account_for_mysql_daemon_service.yml
+  tags:
+    - cis1.2
+
+
+- name: "CHECK: 1.3 Disable Mysql Command History"
+  include_tasks: 13_disable_mysql_command_history.yml
+  tags:
+    - cis1.3

@@ -1,2 +1,5 @@
 ---
-# vars file for test1
+var_mysql_username: 'icadmin'
+var_mysql_password: '#gxHoxd9b'
+var_mysql_host: 'apim1adcdb'
+var_mysql_port: '3307'

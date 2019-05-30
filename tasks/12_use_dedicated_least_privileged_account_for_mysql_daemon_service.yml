@@ -1,0 +1,4 @@
+- name: "Find mysql daemon user"
+  shell: ps -ef | egrep "^mysql.*$"
+  changed_when: False
+  
