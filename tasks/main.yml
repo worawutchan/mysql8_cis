@@ -9,8 +9,7 @@
   tags:
     - cis1.2
 
-
-- name: "CHECK: 1.3 Disable Mysql Command History"
+- name: "CHECK: 1.3 Disable Mysql Command History (Auto Remidiation)"
   include_tasks: 13_disable_mysql_command_history.yml
   tags:
     - cis1.3

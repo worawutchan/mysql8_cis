@@ -1,11 +1,15 @@
 - name: "get mysql variable name datadir"
   shell: mysql -u {{ var_mysql_username }} -p{{ var_mysql_password }} -P{{ var_mysql_port }} -NBe 'show variables where variable_name = "datadir";' | grep datadir | awk '{ print $2 }'
   register: datadir_var
+  failed_when: datadir_var.stdout == ""
   changed_when: False
-  failed_when: False
+  tags:
+    - cis1.1
 
 - name: "check datadir mountpoint"
   shell: df -h {{ datadir_var.stdout }} | grep -v Filesystem | awk '{ print $6 }'
   register: mountpoint_var
-  failed_when: mountpoint_var.stdout == '/' or mountpoint_var.stdout == '/var' or mountpoint_var.stdout == '/usr'
+  failed_when: mountpoint_var.stdout == "/" or mountpoint_var.stdout == "/var" or mountpoint_var.stdout == "/usr"
   changed_when: False
+  tags:
+    - cis1.1
