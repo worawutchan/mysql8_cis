@@ -13,3 +13,8 @@
   include_tasks: 13_disable_mysql_command_history.yml
   tags:
     - cis1.3
+
+- name: "CHECK: 1.4 Verify that MYSQL_PWD Is Not Set (Manual Remidiation)"
+  include_tasks: 14_verify_mysql_pwd.yml
+  tags:
+    - cis1.4

@@ -1,0 +1,7 @@
+- name: "determine if MYSQL_PWD is curently set"
+  shell: grep MYSQL_PWD /proc/*/environ
+  register: mysql_env
+  changed_when: False
+  failed_when: mysql_env.stdout != ""
+  tags:
+    - cis1.4
